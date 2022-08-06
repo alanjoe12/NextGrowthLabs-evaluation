@@ -6,6 +6,7 @@
 I used pickle file for the models and developed a webpage with html and backend we used flask python framework then host it in Heroku.
 #### link - https://hotelcheckinpred.herokuapp.com/
 
+![h1](https://user-images.githubusercontent.com/71687535/183247441-967dcd0e-29cf-4771-b2dd-cc7a594eb4fa.JPG)
 
 ## More Bonus points
 ##### 1. Write about any difficult problem that you solved. (According to us difficult - is something which 90% of people would have only 10% probability in getting a similarly good solution). 
