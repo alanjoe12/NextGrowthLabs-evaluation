@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Hotel_check-in</title>
+     <style>
+        body{
+            background-image: url(../static/img/1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+<center>
+
+        <h1>  PREDICTION :  </h1>
+
+    {%if data == 0%}
+    <h1>Customer is NOT going to be checked in</h1>
+    {%else%}
+    <h1>customer is going to be checked in</h1>
+    {%endif%}
+
+        <br><br>
+    <a href='/'>go back to home page</a>
+
+    </center>
+  </div>
+       </div>
+
+</body>
+</html>

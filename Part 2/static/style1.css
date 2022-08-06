@@ -1,0 +1,173 @@
+:root {
+  --bg-primary: #008eff;
+  --bg-success: #20ad07;
+  --bg-danger: #c30505;
+  --bg-warning: #ff9800;
+  --bg-info: #21d8ef;
+}
+
+.tooltip {
+  position: relative;
+}
+.tooltip-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  width: 100%;
+}
+.tooltip-trigger:hover ~ .tooltip-drop {
+  opacity: 1;
+}
+.tooltip-trigger:hover.tooltip-icon {
+  background-color: var(--bg-primary);
+}
+.tooltip-trigger:hover.input-icon {
+  color: var(--bg-primary);
+}
+.tooltip-trigger:not(input) {
+  height: 100%;
+}
+.tooltip.tooltip-top .tooltip-trigger:hover ~ .tooltip-drop, .tooltip.tooltip-bottom .tooltip-trigger:hover ~ .tooltip-drop {
+  transform: translate(-50%, 0);
+}
+.tooltip.tooltip-top .tooltip-drop, .tooltip.tooltip-bottom .tooltip-drop {
+  left: 50%;
+  transform: translate(-50%, 0.625rem);
+}
+.tooltip.tooltip-top .tooltip-drop:before, .tooltip.tooltip-bottom .tooltip-drop:before {
+  left: 50%;
+}
+.tooltip.tooltip-top .tooltip-drop {
+  bottom: calc(100% + 0.625rem);
+}
+.tooltip.tooltip-top .tooltip-drop:before {
+  top: 100%;
+  transform: translate(-50%, 0);
+}
+.tooltip.tooltip-bottom .tooltip-drop {
+  top: calc(100% + 0.625rem);
+}
+.tooltip.tooltip-bottom .tooltip-drop:before {
+  bottom: 100%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.tooltip.tooltip-left .tooltip-trigger:hover ~ .tooltip-drop, .tooltip.tooltip-right .tooltip-trigger:hover ~ .tooltip-drop {
+  transform: translate(0, -50%);
+}
+.tooltip.tooltip-left .tooltip-drop, .tooltip.tooltip-right .tooltip-drop {
+  top: 50%;
+}
+.tooltip.tooltip-left .tooltip-drop:before, .tooltip.tooltip-right .tooltip-drop:before {
+  top: 50%;
+}
+.tooltip.tooltip-left .tooltip-drop {
+  right: calc(100% + 0.625rem);
+  transform: translate(-0.25rem, -50%);
+}
+.tooltip.tooltip-left .tooltip-drop:before {
+  left: 100%;
+  transform: translate(0, -50%) rotate(-90deg);
+}
+.tooltip.tooltip-right .tooltip-drop {
+  left: calc(100% + 0.625rem);
+  transform: translate(0.25rem, -50%);
+}
+.tooltip.tooltip-right .tooltip-drop:before {
+  right: 100%;
+  transform: translate(0, -50%) rotate(90deg);
+}
+.tooltip-drop {
+  position: absolute;
+  max-width: 200px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  opacity: 0;
+  padding: 0.75rem 0.875rem;
+  background-color: var(--bg-primary);
+  font-size: 0.875rem;
+  text-align: left;
+  z-index: 1;
+  transition: all 0.15s ease-in-out;
+  border-radius: 0.188rem;
+  color: #fff;
+  pointer-events: none;
+}
+.tooltip-drop::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0.375rem solid transparent;
+  border-top-color: var(--bg-primary);
+}
+.tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+  font-size: 0.875rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.188rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-group .tooltip,
+.input-group .input-icon {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  justify-content: center;
+}
+.input-group.input-group-left-icon input {
+  padding-left: 1.875rem;
+}
+.input-group.input-group-left-icon .tooltip,
+.input-group.input-group-left-icon .input-icon {
+  left: 0;
+}
+.input-group.input-group-left-icon input {
+  padding-left: 1.875rem;
+}
+.input-group.input-group-right-icon .tooltip,
+.input-group.input-group-right-icon .input-icon {
+  right: 0;
+}
+.input-group.input-group-right-icon input {
+  padding-right: 1.875rem;
+}
+
+input {
+   height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+input:focus {
+  border-color: var(--bg-primary);
+}

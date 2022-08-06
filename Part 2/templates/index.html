@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Hotel_check-in</title>
+   <style>
+        body{
+            background-image: url(../static/img/1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <form action="/predict" method="POST">
+        <div class="title">HOTEL CHECK-IN PREDICTION</div>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Age</span>
+            <input type="text" name="Age" id="Age" pattern="[0-9]+" required >
+          </div>
+           <div class="input-box">
+            <span class="details">AverageLeadTime</span>
+             <input type="text" name="AverageLeadTime" id="AverageLeadTime" pattern="[0-9]+" required >
+          </div>
+           <div class="input-box">
+            <span class="details">DaysSinceCreation</span>
+            <input type="text" name="DaysSinceCreation" id="DaysSinceCreation" pattern="[0-9]+" required >
+          </div>
+           <div class="input-box">
+            <span class="details">PersonsNights</span>
+             <input type="text" name="PersonsNights" id="PersonsNights"  pattern="[0-9]+" required >
+          </div>
+          <div class="input-box">
+            <span class="details">RoomNights</span>
+             <input type="text" name="RoomNights" id="RoomNights" pattern="[0-9]+" required >
+          </div>
+          <div class="input-box">
+            <span class="details">DaysSinceLastStay</span>
+            <input type="text" name="DaysSinceLastStay" id="DaysSinceLastStay"required >
+          </div>
+          <div class="input-box">
+            <span class="details">DaysSinceFirstStay</span>
+             <input type="text" name="daysSinceFirstStay" id="daysSinceFirstStay" pattern="[0-9]+" required >
+          </div>
+          <div class="input-box">
+            <span class="details">DistributionChannel</span>
+            <select name="DistributionChannel" id="DistributionChannel" required>
+              <option value="1">Direct</option>
+              <option value="0" >Travel Agent/Operator</option>
+                 <option value="2">Groups</option>
+              <option value="3" >Corporate</option>
+                <option value="4">Complementary</option>
+              <option value="5" >Aviation</option>
+                <option value="6" >Other</option>
+              <option disabled selected></option>
+          </select>
+          </div>
+          <div class="input-box">
+            <span class="details">MarketSegment</span>
+             <select name="MarketSegment" id="MarketSegment" required>
+              <option value="1">Direct</option>
+              <option value="0" >Travel Agent/Operator</option>
+                 <option value="2">Corporate</option>
+              <option value="3" >Electronic Distribution</option>
+              <option disabled selected></option>
+          </select>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Predict">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
