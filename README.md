@@ -12,5 +12,7 @@ I used pickle file for the models and developed a webpage with html and backend 
 My feel difficult on regex problem from the dictionary extract integer is little bit difficult for me. On Hotel Check-In prediction i dont feel any difficult
 
 ##### 2. Explain back propagation and tell us how you handle a dataset if 4 out of 30 parameters have null values more than 40 percentage
-######## Backpropagation is an algorithm used in artificial neural network to fine-tune mathematical weight functions and improve the accuracy of an artificial neural network's outputs.
-######## how you handle a dataset if 4 out of 30 parameters have null values more than 40 percentage
+##### Back propagation
+Backpropagation is an algorithm used in artificial neural network to fine-tune mathematical weight functions and improve the accuracy of an artificial neural network's outputs.
+##### how you handle a dataset if 4 out of 30 parameters have null values more than 40 percentage
+if there is more than 70-75% of missing values percentage null values then we can drope the raw , and  more than 40 % null values we can do imputaion methods like replace null values with mean, mode, medium. then replace with unique category like this we can do.
